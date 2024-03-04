@@ -1,0 +1,34 @@
+{
+  "tareas": [
+    {
+      "id": "4bb9",
+      "title": "Ddadasd",
+      "description": "adad",
+      "responsable": "adafffsdfsdfdfsfsdf",
+      "startDate": "2024-03-27",
+      "endDate": "2024-03-27",
+      "difficulty": "hard",
+      "status": "Pending"
+    },
+    {
+      "id": "4bb9",
+      "title": "Ddadasd",
+      "description": "adad",
+      "responsable": "ad",
+      "startDate": "2024-03-27",
+      "endDate": "2024-03-27",
+      "difficulty": "hard",
+      "status": "Completed"
+    },
+    {
+      "id": "4bb9",
+      "title": "Ddadasd",
+      "description": "lllll",
+      "responsable": "ad",
+      "startDate": "2024-03-27",
+      "endDate": "2024-03-27",
+      "difficulty": "hard",
+      "status": "Failed"
+    }
+  ]
+}
