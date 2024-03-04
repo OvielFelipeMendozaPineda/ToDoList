@@ -202,12 +202,11 @@ function showTask(response, status) {
     mainContent.innerHTML = '';
     let article = document.createElement('article')
     article.setAttribute('class', 'card-view')
-    mainContent.appendChild(article)
-    response.filter(item => item.status == status).forEach(item => { 
+    response.filter(item => item.status == status).forEach(item => {
         article.innerHTML += `
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
-                    <h5 class="card-title">${item.title}</h5>
+                    <h5 class="card-title" id=${item.id}>${item.title}</h5>
                     <p class="card-text">${item.description}</p>
                     <h5 class="card-responsable">Responsable</h5>
                     <p>${item.responsable}</p>
@@ -217,11 +216,13 @@ function showTask(response, status) {
                     <p>${item.endDate}</p>
                     <h5 class="card-difficulty">Difficulty</h5>
                     <p>${item.difficulty}</p>
-                    ${item.status == 'Completed' ? '' : '<a href="#" class="btn btn-primary">Failed :/</a>'}
-                    ${item.status == 'Failed' ? '' : '<a href="#" class="btn btn-primary">Done!</a>'}
+                    ${item.status == 'Completed' ? '' : `<a href="#" class="btn btn-primary" id="${item.id}" >Failed :/</a>`}
+                    ${item.status == 'Failed' ? '' : `<a href="#" class="btn btn-primary" id="${item.id}">Done!</a>`}
                 </div>
             </div>
-            `
+            ` 
+
+        mainContent.appendChild(article)
     })
 }
 function navBarLinks() {
@@ -237,7 +238,29 @@ function navBarLinks() {
                 case "['b']":
                     customFetch("tareas", null, "GET", null)
                         .then(response => {
-                            response.forEach(item => showTask(response, "Pending"))
+                            response.forEach(() => { showTask(response, "Pending") })
+                            let botones = document.querySelectorAll('.btn')
+                            botones.forEach(b => {
+                                b.addEventListener('click', (e) => {
+                                    let idBoton = e.target.id;
+                                    let botonText = e.target.innerText
+                                    console.log(e.target.innerText);
+                                    let index = response.findIndex(item => item.id === idBoton)
+                                    switch (botonText) {
+                                        case 'Done!':
+                                            response[index].status = 'Completed'
+                                            customFetch("tareas", idBoton, "PUT", response[index] )
+                                            break;
+                                        case 'Failed :/':
+                                            console.log("No hecha");
+                                            response[index].status = 'Failed'
+                                            customFetch("tareas", idBoton, "PUT", response[index] )
+                                            break;
+                                        default:
+                                            break;
+                                    }
+                                })
+                            })
                         })
                     break;
                 case "['c']":

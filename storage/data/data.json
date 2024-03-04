@@ -1,33 +1,53 @@
 {
   "tareas": [
     {
-      "id": "4bb9",
-      "title": "Ddadasd",
-      "description": "adad",
-      "responsable": "adafffsdfsdfdfsfsdf",
-      "startDate": "2024-03-27",
-      "endDate": "2024-03-27",
+      "id": "c149",
+      "title": "Proyecto JavaScript",
+      "description": "Hace proyecto final de JS",
+      "responsable": "Felipe Mendoza",
+      "startDate": "2024-03-04",
+      "endDate": "2024-03-12",
       "difficulty": "hard",
       "status": "Pending"
     },
     {
-      "id": "4bb9",
-      "title": "Ddadasd",
-      "description": "adad",
-      "responsable": "ad",
-      "startDate": "2024-03-27",
-      "endDate": "2024-03-27",
-      "difficulty": "hard",
+      "id": "ab4f",
+      "title": "ToDo board",
+      "description": "Terminar pagina de tareas pendientes.",
+      "responsable": "Felipe Mendoza",
+      "startDate": "2024-03-04",
+      "endDate": "2024-03-04",
+      "difficulty": "easy",
+      "status": "Pending"
+    },
+    {
+      "id": "bde7",
+      "title": "Diseñar la interfaz de usuario",
+      "description": "Crear el diseño visual de la página de tareas pendientes.",
+      "responsable": "Juan Perez",
+      "startDate": "2024-03-05",
+      "endDate": "2024-03-07",
+      "difficulty": "medium",
       "status": "Completed"
     },
     {
-      "id": "4bb9",
-      "title": "Ddadasd",
-      "description": "lllll",
-      "responsable": "ad",
-      "startDate": "2024-03-27",
-      "endDate": "2024-03-27",
+      "id": "cfa2",
+      "title": "Implementar funcionalidad de agregar tarea",
+      "description": "Desarrollar la capacidad de agregar nuevas tareas a la lista.",
+      "responsable": "María García",
+      "startDate": "2024-03-08",
+      "endDate": "2024-03-10",
       "difficulty": "hard",
+      "status": "Failed"
+    },
+    {
+      "id": "eab9",
+      "title": "Agregar filtro de búsqueda",
+      "description": "Incorporar un filtro de búsqueda para encontrar tareas específicas.",
+      "responsable": "Luis Ramirez",
+      "startDate": "2024-03-11",
+      "endDate": "2024-03-13",
+      "difficulty": "medium",
       "status": "Failed"
     }
   ]
